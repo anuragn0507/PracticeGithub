@@ -1,0 +1,15 @@
+.navBar{
+    color:white;
+    background-color:black;
+    display:flex;
+    margin-left: 40%;
+    justify-content:space-around;
+    border-radius: 15px;
+    height:50px;
+    
+}
+.navBar a {
+    text-decoration:none;
+    color:white;
+    margin-top: 6px;
+}
