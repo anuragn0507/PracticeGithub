@@ -6,7 +6,7 @@ function User() {
   const dispatch =  useDispatch();
 
   const usersData = useSelector((storeData) => {
-    return storeData.users;
+    return storeData.userReducer.users;
   });
   
   const callDeleteAction = (index)=>{

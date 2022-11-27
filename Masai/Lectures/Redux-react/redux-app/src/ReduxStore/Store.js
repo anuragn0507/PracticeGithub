@@ -1,6 +1,13 @@
-import { legacy_createStore as createStore, applyMiddleware } from 'redux';
+import { legacy_createStore as createStore, combineReducers } from "redux";
 import userReducer from "../Reducers/userReducer";
-import logger from 'redux-logger'
+import productReducer from "../Reducers/productReducer";
 
-export const store = createStore(userReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const combineReducer = combineReducers({
+    userReducer,
+    productReducer,
+})
 
+export const store = createStore(
+  combineReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
