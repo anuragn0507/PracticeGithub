@@ -3,10 +3,11 @@ var initialData = {
   jewelery: [],
   mensWearing: [],
   womenWearing: [],
+  cart:[],
 };
 
 const productReducer = (storeData = initialData, action) => {
-  console.log("Product Reducer are called");
+  // console.log("Product Reducer are called");
   switch (action.type) {
     case "ELECTRONICS": {
       return {
@@ -20,6 +21,9 @@ const productReducer = (storeData = initialData, action) => {
 
         jewelery: action.payload,
       };
+    }
+    case "CART":{
+      
     }
     default: {
       return storeData;
